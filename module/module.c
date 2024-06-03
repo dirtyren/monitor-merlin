@@ -681,28 +681,6 @@ static int handle_comment_data(merlin_node *node, merlin_header *hdr, void *buf)
 		delete_comment(cmnt->comment_type, cmnt->comment_id);
 		merlin_set_block_comment(NULL);
 
-		// if (ds->comment_type == HOST_COMMENT) {
-		// 	cmnt = get_first_comment_by_host(ds->host_name);
-		// 	for (; cmnt; cmnt = next_cmnt) {
-		// 		next_cmnt = cmnt->nexthash;
-		// 		if (matching_comment(cmnt, ds)) {
-		// 			merlin_set_block_comment(ds);
-		// 			delete_comment(cmnt->comment_type, cmnt->comment_id);
-		// 			merlin_set_block_comment(NULL);
-		// 		}
-		// 	}
-		// } else {
-		// 	/* this is *really* expensive. Sort of wtf? */
-		// 	for (cmnt = comment_list; cmnt; cmnt = next_cmnt) {
-		// 		next_cmnt = cmnt->next;
-
-		// 		if (matching_comment(cmnt, ds)) {
-		// 			merlin_set_block_comment(ds);
-		// 			delete_comment(cmnt->comment_type, cmnt->comment_id);
-		// 			merlin_set_block_comment(NULL);
-		// 		}
-		// 	}
-		// }
 		return 0;
 	} else {
 		/*
