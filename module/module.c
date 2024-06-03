@@ -673,7 +673,7 @@ static int handle_comment_data(merlin_node *node, merlin_header *hdr, void *buf)
 	}
 
 	if (ds->type == NEBTYPE_COMMENT_DELETE) {
-		comment *cmnt, *next_cmnt;o
+		comment *cmnt, *next_cmnt;
 
 		cmnt = find_comment(ds->comment_id, ds->comment_type);
 
